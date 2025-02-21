@@ -1,0 +1,17 @@
+@let task = task$ | async;
+<div class="p-5">
+<p><a routerLink="/">Go Back</a></p>
+
+@if (task) {
+    <div class="card">
+        <h5 class="card-header">{{ task.title}}</h5>
+        <div class="card-body">
+          <p class="card-text">{{task.description}}</p>
+          <a [routerLink]="['/task/edit/',task.id]" class="btn btn-primary">Edit</a>
+        </div>
+      </div>
+  } @else {
+    <p>Loading...</p>
+  }
+</div>
+

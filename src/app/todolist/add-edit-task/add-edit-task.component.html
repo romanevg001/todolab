@@ -1,0 +1,36 @@
+<div class="p-5">
+    <p><a routerLink="/">Go Back</a></p>
+
+    <h3>{{isEdit() ? 'Edit' : 'Add'}}</h3>
+    
+<form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Title</label>
+    <input 
+        type="text" 
+        class="form-control" 
+        formControlName="title" 
+        id="exampleFormControlInput1" 
+       
+    />
+</div>
+<div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+    <textarea 
+        class="form-control" 
+        id="exampleFormControlTextarea1" 
+        rows="3" 
+        formControlName="description"
+    ></textarea>
+</div>
+
+<div class="mb-3">
+
+        <app-datepicker-range-popup [startDate]="fromDate" [endDate]="toDate" (fromToDate)="setDate($event)"></app-datepicker-range-popup>
+
+</div>
+
+<button type="submit" class="btn btn-primary m-3 pull-right" >Save</button>
+</form>
+
+</div>

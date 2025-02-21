@@ -1,0 +1,19 @@
+ul {
+    li {
+        border: 1px solid #fcfcfc;
+        border-radius: 3px;
+        padding: 5px 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.meeting {
+    color: oklch(0.1937 0.006 300.98);
+}
+.approaching {
+    color: rgb(111, 66, 193);
+}
+.miss{ 
+    color: rgb(215, 58, 73);
+}
